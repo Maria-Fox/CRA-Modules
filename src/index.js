@@ -1,17 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import fruits from "./foods";
+import {randomChoice, removeItem} from "./helpers"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+let randomFruit = randomChoice(fruits);
+console.log(`I'd like one ${randomFruit}, please.`);
+console.log(`Here you go. One ${randomFruit}`);
+console.log(`Delicious! May I have another?`);
+console.log(`I'm sorry, we're all out. We have ${fruits} left`)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// otherwise, do a length to say how many fruits are left.
+
+let lengthOfItems = fruits.length;
+console.log(`We have ${lengthOfItems} left.`)
